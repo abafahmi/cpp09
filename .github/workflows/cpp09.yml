@@ -22,6 +22,11 @@ jobs:
           chmod +x tests/run_tests.sh
           ./tests/run_tests.sh
 
+      - name: build ex01
+        run: make -C ex01
+
       - name: run valgrind
         run: |
           valgrind --leak-check=full ./ex01/RPN "3 4 +"
+      - name: fclean ex01
+        run: make fclean -c ex01    
