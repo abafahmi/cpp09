@@ -29,4 +29,4 @@ jobs:
         run: |
           valgrind --leak-check=full ./ex01/RPN "3 4 +"
       - name: fclean ex01
-        run: make fclean -c ex01    
+        run: make fclean -C ex01    
